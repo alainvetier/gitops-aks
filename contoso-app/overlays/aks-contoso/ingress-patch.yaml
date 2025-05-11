@@ -6,4 +6,4 @@ metadata:
 spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
-    - host: contoso.aks-priv.int2skynet.com
+    - host: contoso-kbtg.aks-priv.int2skynet.com
