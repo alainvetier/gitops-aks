@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: contoso-website
+  name: contoso-website-kbtg
   namespace: dev
 spec:
   selector:
     matchLabels:
-      app: contoso-website
+      app: contoso-website-kbtg
   template:
     metadata:
       labels:
-        app: contoso-website
+        app: contoso-website-kbtg
     spec:
       containers:
         - image: vetia/contoso-kbtg:1.0.0
-          name: contoso-website
+          name: contoso-website-kbtg
           resources:
             requests:
               cpu: 100m
