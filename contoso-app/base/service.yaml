@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: contoso-website-kbtg
-  namespace: dev
+  name: contoso-webserver
 spec:
-  ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80      
   selector:
-    app: contoso-website-kbtg
+    app: contoso-webserver
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
   type: ClusterIP

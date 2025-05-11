@@ -1,27 +1,28 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: contoso-website-kbtg
-  namespace: dev
+  name: contoso-webserver
+  labels:
+    app: contoso-webserver
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: contoso-website-kbtg
+      app: contoso-webserver
   template:
     metadata:
       labels:
-        app: contoso-website-kbtg
+        app: contoso-webserver
     spec:
       containers:
-        - image: vetia/contoso-kbtg:1.0.0
-          name: contoso-website-kbtg
-          resources:
+      - name: contoso-webserver
+        image: vetia/contoso-kbtg:1.0.0
+        resources:
             requests:
               cpu: 100m
               memory: 128Mi
             limits:
               cpu: 250m
               memory: 256Mi
-          ports:
-            - containerPort: 80
+        ports:
+        - containerPort: 80
