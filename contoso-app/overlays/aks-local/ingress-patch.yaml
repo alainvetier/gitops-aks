@@ -7,3 +7,12 @@ spec:
   ingressClassName: nginx
   rules:
     - host: contoso-kbtg.aks-local.int2skynet.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: contoso-webserver
+                port:
+                  number: 80

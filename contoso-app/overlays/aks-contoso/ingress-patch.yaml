@@ -7,3 +7,12 @@ spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
     - host: contoso-kbtg.aks-priv.int2skynet.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: contoso-webserver
+                port:
+                  number: 80
