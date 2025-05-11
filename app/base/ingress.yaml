@@ -1,1 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: contoso-website
+  namespace: dev
+spec:
+  ingressClassName: PLACEHOLDER
+  rules:
+    - host: PLACEHOLDER
+      http:
+        paths:
+          - backend:
+              service:
+                name: contoso-website
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
 
