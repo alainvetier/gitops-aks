@@ -26,3 +26,11 @@ metadata:
   name: kbtgdemo
   labels:
     app: kbtgdemo
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: stradcom
+  labels:
+    app: stradcom
