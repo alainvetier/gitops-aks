@@ -34,3 +34,12 @@ metadata:
   name: stradcom
   labels:
     app: stradcom
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bsp
+  labels:
+    app: bsp
+
